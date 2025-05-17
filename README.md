@@ -43,12 +43,10 @@ README.md: Contains project documentation.
 ✅ Actual: Relevant warnings such as "You must choose a location!" and "Invalid username/password. Please try again." appeared.
 
 
-
 2️⃣ US_402 Login test with valid user data
 📌 As a user, I want to log into the system with valid credentials to access system features.
 ✅ Expected: User logs in successfully after selecting a location.
 ✅ Actual: Successful login occurred with correct username, password, and location.
-
 
 
 3️⃣ US_403 - Logout
@@ -57,12 +55,10 @@ README.md: Contains project documentation.
 ✅ Actual: The session ended successfully, and the user was logged out.
 
 
-
 4️⃣ US_404 - Patient registration
 📌 As a user, I want to be able to register a patient by entering their information into the system.
 ✅ Expected: User registers a new patient with demographic/contact/relationship info.
 ✅ Actual: Patient appeared in the system after successful registration.
-
 
 
 5️⃣ US_405 - Access account settings
@@ -71,12 +67,10 @@ README.md: Contains project documentation.
 ✅ Actual: User accessed and interacted with account settings.
 
 
-
 6️⃣ US_406 - Patient search in list
 📌 As a doctor, I want to search for a specific patient to access their information.
 ✅ Expected: Valid searches return patient data; invalid searches show “No match.”
 ✅ Actual: Both positive and negative test cases passed.
-
 
 
 7️⃣ US_407 - Patient deletion
@@ -85,19 +79,16 @@ README.md: Contains project documentation.
 ✅ Actual: Patient data successfully removed from the system.
 
 
-
 8️⃣ US_408 - List all patients
 📌 As a doctor, I want to list all patients so that I can plan more effectively.
 ✅ Expected: The number of rows in the patient table matches the summary below.
 ✅ Actual: Patient list and summary count were consistent.
 
 
-
 9️⃣ US_409 - Merge patient records
 📌 As a doctor, I want to merge duplicate patient records to manage information better.
 ✅ Expected: Records merged after selecting IDs and confirming.
 ✅ Actual: Patient records merged and displayed correctly.
-
 
 
 🔟 US_410 - Timezone error on appointment

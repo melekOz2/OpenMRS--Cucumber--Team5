@@ -57,90 +57,70 @@ README.md: Contains project documentation.
 
 1️⃣ US_401 - Login test with invalid user data
 📌 As a user, I want to see error messages for failed login attempts to enhance system security.
-
 ✅ Expected: Location selection and invalid credential errors are displayed appropriately.
-
 ✅ Actual: Relevant warnings such as "You must choose a location!" and "Invalid username/password. Please try again." appeared.
 
-US_401.gif
+
 
 2️⃣ US_402 Login test with valid user data
 📌 As a user, I want to log into the system with valid credentials to access system features.
-
 ✅ Expected: User logs in successfully after selecting a location.
-
 ✅ Actual: Successful login occurred with correct username, password, and location.
 
 
 
 3️⃣ US_403 - Logout
 📌 As a user, I want to log out of the system to protect sensitive data.
-
 ✅ Expected: Clicking "Logout" redirects to the login page.
-
 ✅ Actual: The session ended successfully, and the user was logged out.
 
-403
+
 
 4️⃣ US_404 - Patient registration
 📌 As a user, I want to be able to register a patient by entering their information into the system.
-
 ✅ Expected: User registers a new patient with demographic/contact/relationship info.
-
 ✅ Actual: Patient appeared in the system after successful registration.
 
 
 
 5️⃣ US_405 - Access account settings
 📌 As a user, I want to have an icon or link on the homepage that leads to my account settings.
-
 ✅ Expected: “My Account” opens with settings options like “Change Password.”
-
 ✅ Actual: User accessed and interacted with account settings.
 
 
 
 6️⃣ US_406 - Patient search in list
 📌 As a doctor, I want to search for a specific patient to access their information.
-
 ✅ Expected: Valid searches return patient data; invalid searches show “No match.”
-
 ✅ Actual: Both positive and negative test cases passed.
 
 
 
 7️⃣ US_407 - Patient deletion
 📌 As a doctor, I want to be able to delete a patient from the system.
-
 ✅ Expected: Doctor deletes patient record with a valid reason.
-
 ✅ Actual: Patient data successfully removed from the system.
 
 
 
 8️⃣ US_408 - List all patients
 📌 As a doctor, I want to list all patients so that I can plan more effectively.
-
 ✅ Expected: The number of rows in the patient table matches the summary below.
-
 ✅ Actual: Patient list and summary count were consistent.
 
 
 
 9️⃣ US_409 - Merge patient records
 📌 As a doctor, I want to merge duplicate patient records to manage information better.
-
 ✅ Expected: Records merged after selecting IDs and confirming.
-
 ✅ Actual: Patient records merged and displayed correctly.
 
 
 
 🔟 US_410 - Timezone error on appointment
 📌 As a user, I want to see an error message when scheduling an appointment with incorrect system timezone.
-
 ✅ Expected: Error appears if timezone is not GMT+0.
-
 ✅ Actual: Application blocked scheduling until the timezone was corrected.
 
 

@@ -23,24 +23,6 @@ Data-driven testing using @DataProvider
 Parallel and cross-browser test support
 🔗 OpenMRS Demo
 
-🏗️🚛 Project Structure
-OpenMRSProject/
-│
-├── src/
-│   ├── OpenMRS/
-│   │    │ 
-│   │    ├── base/             # BaseDriver and core structure
-│   │    ├── elements/         # Page Object classes (POM)
-│   │    ├── methods/          # User actions
-│   │    └── tests/            # Cucumber test scenarios
-│   │        └─XML/            # Cucumber configuration files
-│   │
-│   └── utility/               # Helper classes (Utilities, etc.)
-│
-├── test-output/               # Cucumber output reports
-├── tests_gif/                 # Test GIFs
-│ 
-└── README.md                  # Project documentation
 
 📖 Project Structure Explanation
 src/OpenMRS/base/: Contains the BaseDriver class and core structure.

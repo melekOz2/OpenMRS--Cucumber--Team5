@@ -1,164 +1,94 @@
-OpenMRS Test Automation Project – with Cucumber
-📌 Table of Contents
-Project Description
-Project Structure
-Project Structure Explanation
-User Stories and Test Scenarios
-Test Coverage Table
-Tools and Technologies
-Project Team
-GitHub Repository
-Project Team GitHub
-License
-📝 Project Description
-This project automates test scenarios for the OpenMRS Demo System, an open-source medical record platform.
-The test scenarios are implemented using Cucumber, Selenium WebDriver, and follow the Page Object Model (POM) structure.
-Test executions are configured through the testng.xml file.
 
-📅 Features:
-
-Modular POM design
-Test grouping and execution via cucucmber.xml
-Data-driven testing using @DataProvider
-Parallel and cross-browser test support
-🔗 OpenMRS Demo
+---
+## 📝 Project Description
+This project automates test scenarios for the **OpenMRS Demo System**, an open-source medical record platform.  
+The test scenarios are implemented using **Cucumber**, along with **Selenium WebDriver**, and follow the **Page Object Model (POM)** structure.  
+**This project is primarily developed and structured using Cucumber for Behavior-Driven Development (BDD) style test automation.**  
+Test executions are configured through the `testng.xml` file.
 
 
-📖 Project Structure Explanation
-src/OpenMRS/base/: Contains the BaseDriver class and core structure.
-src/OpenMRS/elements/: Contains Page Object classes (POM) for each page.
-src/OpenMRS/methods/: Contains methods for user actions.
-src/OpenMRS/tests/: Contains TestNG test scenarios.
-src/OpenMRS/tests/XML/: Contains Cucucmber configuration files.
-src/OpenMRS/utility/: Contains helper classes like MyFunc, etc.
-test-output/: Contains Cucumber output reports.
-tests_gif/: Contains GIFs demonstrating test scenarios.
-README.md: Contains project documentation.
+## 🧑‍💻 User Stories and Test Scenarios
 
-🧑‍💻 User Stories and Test Scenarios
+| ID       | User Story Description                            | Expected Outcome                                               | Actual Outcome                                             |
+|----------|--------------------------------------------------|----------------------------------------------------------------|------------------------------------------------------------|
+| **US_401** | Login test with invalid user data             | Error messages for location and invalid credentials            | Warnings like "You must choose a location!" and "Invalid username/password." displayed |
+| **US_402** | Login test with valid user data               | Successful login after selecting location                      | Login successful with correct credentials                  |
+| **US_403** | Logout                                        | Redirect to login page after logout                            | Session ended and user logged out                           |
+| **US_404** | Patient registration                          | Patient registered with demographic/contact/relationship info | Patient appeared in system after registration              |
+| **US_405** | Access account settings                        | “My Account” page opens with settings options                  | Account settings accessed and interacted with              |
+| **US_406** | Patient search in list                         | Valid searches return data; invalid searches show “No match”  | Both positive and negative searches passed                  |
+| **US_407** | Patient deletion                              | Patient record deleted with valid reason                       | Patient data removed successfully                           |
+| **US_408** | List all patients                             | Number of rows matches summary count                           | Patient list and summary consistent                         |
+| **US_409** | Merge patient records                         | Records merged after selection and confirmation                | Patient records merged correctly                            |
+| **US_410** | Timezone error on appointment                 | Error if timezone is not GMT+0                                 | Scheduling blocked until timezone corrected                 |
 
-1️⃣ US_401 - Login test with invalid user data
-📌 As a user, I want to see error messages for failed login attempts to enhance system security.
-✅ Expected: Location selection and invalid credential errors are displayed appropriately.
-✅ Actual: Relevant warnings such as "You must choose a location!" and "Invalid username/password. Please try again." appeared.
+---
 
+## 📊 Test Coverage Table
 
-2️⃣ US_402 Login test with valid user data
-📌 As a user, I want to log into the system with valid credentials to access system features.
-✅ Expected: User logs in successfully after selecting a location.
-✅ Actual: Successful login occurred with correct username, password, and location.
+| Test Scenario                        | Status   | Priority |
+|------------------------------------|----------|----------|
+| US_401 - Login errors               | ✅ Passed | High     |
+| US_402 - Successful login           | ✅ Passed | High     |
+| US_403 - Logout                    | ✅ Passed | High     |
+| US_404 - Patient registration      | ✅ Passed | Medium   |
+| US_405 - My account settings       | ✅ Passed | Low      |
+| US_406 - Patient search            | ✅ Passed | High     |
+| US_407 - Patient deletion          | ✅ Passed | High     |
+| US_408 - List all patients         | ✅ Passed | Medium   |
+| US_409 - Merge patient records     | ✅ Passed | Medium   |
+| US_410 - Timezone error during appointment | ✅ Passed | Low      |
 
+---
 
-3️⃣ US_403 - Logout
-📌 As a user, I want to log out of the system to protect sensitive data.
-✅ Expected: Clicking "Logout" redirects to the login page.
-✅ Actual: The session ended successfully, and the user was logged out.
+## 🚀 Tools and Technologies
 
+| Tool / Technology      | Description                                    |
+|-----------------------|------------------------------------------------|
+| Java                  | Programming language                           |
+| Selenium WebDriver    | Web automation framework                        |
+| Cucumber              | Testing framework                              |
+| Cucumber XML          | Manages test configurations and groups        |
+| Maven                 | Dependency management and build tool           |
+| Page Object Model (POM) | Reusable and maintainable test design         |
+| Git / GitHub          | Version control                                |
 
-4️⃣ US_404 - Patient registration
-📌 As a user, I want to be able to register a patient by entering their information into the system.
-✅ Expected: User registers a new patient with demographic/contact/relationship info.
-✅ Actual: Patient appeared in the system after successful registration.
+---
 
+## 📚 Required Libraries
 
-5️⃣ US_405 - Access account settings
-📌 As a user, I want to have an icon or link on the homepage that leads to my account settings.
-✅ Expected: “My Account” opens with settings options like “Change Password.”
-✅ Actual: User accessed and interacted with account settings.
+- Selenium  
+- Cucumber  
+- Apache Commons IO  
+- SLF4J NOP  
 
+---
 
-6️⃣ US_406 - Patient search in list
-📌 As a doctor, I want to search for a specific patient to access their information.
-✅ Expected: Valid searches return patient data; invalid searches show “No match.”
-✅ Actual: Both positive and negative test cases passed.
+## 👨‍💻 Project Team
 
+| Name                 | Role                   | User Story(s)         | Short Bio & Responsibilities                                      |
+|----------------------|------------------------|-----------------------|------------------------------------------------------------------|
+| Serkan Sewoester     | QA Automation Tester    | US_403                | Experienced in Selenium and TestNG, responsible for logout tests and session management scenarios. |
+| Burak Bora Durmaz    | QA Automation Tester    | US_408                | Skilled in cross-browser testing, manages patient listing and UI consistency. |
+| Murat Öksüz          | QA Automation Tester    | US_404                | Focuses on patient registration workflows and data validation.   |
+| Melike Emine Özyavuz | QA Automation Tester    | US_401                | Expert in negative testing scenarios; leads login error validations. |
+| İbrahim Can          | QA Automation Tester    | US_405                | Handles account settings tests, password changes, and UI navigation. |
+| Ayşenur Gökdemir     | QA Automation Tester    | US_402, US_410        | Responsible for login success cases and timezone-related appointment errors. |
+| Tuğba Yılmaz         | QA Automation Tester    | US_406                | Specializes in patient search functionalities and edge cases.    |
+| Ennur Göl            | QA Automation Tester    | US_407                | Manages patient deletion scenarios ensuring secure data removal. |
+| Hakan Mert           | QA Automation Tester    | US_409                | Oversees merge patient records test cases and conflict resolution. |
 
-7️⃣ US_407 - Patient deletion
-📌 As a doctor, I want to be able to delete a patient from the system.
-✅ Expected: Doctor deletes patient record with a valid reason.
-✅ Actual: Patient data successfully removed from the system.
+---
 
+## 🔗 GitHub Repository
 
-8️⃣ US_408 - List all patients
-📌 As a doctor, I want to list all patients so that I can plan more effectively.
-✅ Expected: The number of rows in the patient table matches the summary below.
-✅ Actual: Patient list and summary count were consistent.
+- [OpenMRS Cucumber Automation Repository](#) *(Add actual link)*
+- 
 
+---
 
-9️⃣ US_409 - Merge patient records
-📌 As a doctor, I want to merge duplicate patient records to manage information better.
-✅ Expected: Records merged after selecting IDs and confirming.
-✅ Actual: Patient records merged and displayed correctly.
+## 📝 License
 
+This project incorporates code from the OpenMRS project.
 
-🔟 US_410 - Timezone error on appointment
-📌 As a user, I want to see an error message when scheduling an appointment with incorrect system timezone.
-✅ Expected: Error appears if timezone is not GMT+0.
-✅ Actual: Application blocked scheduling until the timezone was corrected.
-
-
-
-📊 Test Coverage Table
-Test Scenario	Status	Priority
-US_401 - Login errors	✅ Passed	High
-US_402 - Successful login	✅ Passed	High
-US_403 - Logout	✅ Passed	High
-US_404 - Patient registration	✅ Passed	Medium
-US_405 - My account settings	✅ Passed	Low
-US_406 - Patient search	✅ Passed	High
-US_407 - Patient deletion	✅ Passed	High
-US_408 - List all patients	✅ Passed	Medium
-US_409 - Merge patient records	✅ Passed	Medium
-US_410 - Timezone error during appointment	✅ Passed	Low
-
-🚀 Tools and Technologies
-Tool / Technology	Description
-Java	Programming language
-Selenium WebDriver	Web automation framework
-Cucumber	Testing framework
-Cucumber XML	Manages test configurations and groups
-Maven	Dependency management and compilation operations in the project
-Page Object Model	Reusable and maintainable test design
-Git / GitHub	Version control
-
-📚 Required Libraries
-To ensure the project runs correctly, the following libraries must be added to the project:
-
-Selenium
-Cucumber
-Apache Commons IO
-SLF4J NOP
-👨‍💻 Project Team
-Name	Role	User Story
-Serkan Sewoester QA Automation Tester US_403
-Burak Bora Durmaz QA Automation Tester US_408
-Murat Öksüz QA Automation Tester US_404
-Melike Emine Özyavuz QA Automation Tester US_401
-İbrahim Can QA Automation Tester US_405
-Ayşenur Gökdemir QA Automation Tester US_402 , US_410
-Tuğba Yılmaz QA Automation Tester US_406
-Ennur Göl QA Automation Tester US_407
-Hakan Mert QA Automation Tester US_409
-
-
-Note: This is a collaborative QA training project.
-
-🔗 GitHub Repository
-📂 OpenMRS Cucumber Automation Repository
-
-👨‍💻 Project Team GitHub
-Serkan Sewoester
-Burak Bora Durmaz 
-Murat Öksüz
-Melike Emine Özyavuz
-İbrahim Can
-Ayşenur Gökdemir
-Tuğba Yılmaz
-Ennur Göl
-Hakan Mert
-
-Source
-This project is based on the open source software OpenMRS. For more information about OpenMRS: https://openmrs.org
-
-📝 License
-This project incorporates code from the OpenMRS project: 
+For more information about OpenMRS, visit: [https://openmrs.org](https://openmrs.org)

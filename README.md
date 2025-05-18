@@ -1,4 +1,4 @@
-OpenMRS Test Automation Project – with TestNG
+OpenMRS Test Automation Project – with Cucumber
 📌 Table of Contents
 Project Description
 Project Structure
@@ -18,7 +18,7 @@ Test executions are configured through the testng.xml file.
 📅 Features:
 
 Modular POM design
-Test grouping and execution via testng.xml
+Test grouping and execution via cucucmber.xml
 Data-driven testing using @DataProvider
 Parallel and cross-browser test support
 🔗 OpenMRS Demo
@@ -29,7 +29,7 @@ src/OpenMRS/base/: Contains the BaseDriver class and core structure.
 src/OpenMRS/elements/: Contains Page Object classes (POM) for each page.
 src/OpenMRS/methods/: Contains methods for user actions.
 src/OpenMRS/tests/: Contains TestNG test scenarios.
-src/OpenMRS/tests/XML/: Contains TestNG configuration files.
+src/OpenMRS/tests/XML/: Contains Cucucmber configuration files.
 src/OpenMRS/utility/: Contains helper classes like MyFunc, etc.
 test-output/: Contains TestNG output reports.
 tests_gif/: Contains GIFs demonstrating test scenarios.

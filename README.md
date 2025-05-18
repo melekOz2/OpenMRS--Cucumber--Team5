@@ -31,7 +31,7 @@ src/OpenMRS/methods/: Contains methods for user actions.
 src/OpenMRS/tests/: Contains TestNG test scenarios.
 src/OpenMRS/tests/XML/: Contains Cucucmber configuration files.
 src/OpenMRS/utility/: Contains helper classes like MyFunc, etc.
-test-output/: Contains TestNG output reports.
+test-output/: Contains Cucumber output reports.
 tests_gif/: Contains GIFs demonstrating test scenarios.
 README.md: Contains project documentation.
 
